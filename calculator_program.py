@@ -51,7 +51,7 @@ for row in number:
     count += 1
     for col in range(len(row)):
         button = Button(frame, text=row[col], height=4, width=9, font=35,
-                        command=lambda r=row,c=col: button_press(r[c])) #捕捉當下按鈕的row col
+                        command=lambda r=row,c=col: button_press(r[c])) #用參數r和c捕捉當下按鈕的row col，使得按下時抓取到對的數值，不然都會抓到最後一項
         button.grid(row=count, column=col)
 
 button0 = Button(frame, text=0, height=4, width=9, font=35,
